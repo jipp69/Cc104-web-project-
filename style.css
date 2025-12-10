@@ -1,0 +1,131 @@
+/* GLOBAL DESIGN */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f1f1;
+    color: #333;
+}
+
+/* NAVIGATION BAR */
+nav {
+    background: #800000;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd9d9;
+    text-shadow: 0 0 10px white;
+}
+
+/* PAGE TITLES */
+.page-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #800000;
+    animation: fadeDrop 1s ease;
+}
+
+@keyframes fadeDrop {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* MEMBERS GRID */
+.members-container {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.member-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #bfbfbf;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.member-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #800000;
+}
+
+/* CARDS */
+.algo-card {
+    background: white;
+    padding: 15px;
+    margin: 15px 20px;
+    border-left: 6px solid maroon;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.algo-card:hover {
+    background: #fff3f3;
+    transform: scale(1.02);
+}
+
+.content {
+    display: none;
+    margin-top: 10px;
+}
+
+.example-box, .code-box {
+    background: #f1e2e2;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 5px;
+    font-family: monospace;
+}
+
+/* CODE BOX SPECIFIC */
+.code-box {
+    background: #1e1e1e;
+    color: #00ffdd;
+    box-shadow: 0 0 15px black inset;
+    overflow-x: auto;
+    transition: 0.3s;
+}
+
+.code-box:hover {
+    box-shadow: 0 0 30px #800000 inset;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}

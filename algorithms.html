@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">CC104</div>
+    <ul>
+        <li><a href="index.html">Members</a></li>
+        <li><a href="algorithms.html">Algorithms</a></li>
+        <li><a href="pseudocode.html">Pseudocode</a></li>
+        <li><a href="cpp.html">C++</a></li>
+        <li><a href="python.html">Python</a></li>
+    </ul>
+</nav>
+
+<h1 class="page-title">Algorithms (10 Items)</h1>
+
+<!-- Repeat this block for all 10 algorithms -->
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">1. Linear Search</div>
+    <div class="content">
+        <p><b>Explanation:</b> Checks each element in a list one-by-one until the target is found.</p>
+        <div class="example-box">
+SET found TO false<br>
+FOR each element IN list<br>
+&emsp;IF element = target THEN<br>
+&emsp;&emsp;found = true<br>
+END FOR<br>
+PRINT found
+        </div>
+    </div>
+</div>
+
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">2. Binary Search</div>
+    <div class="content">
+        <p><b>Explanation:</b> Splits a sorted list in half repeatedly until the target is found.</p>
+        <div class="example-box">
+WHILE low ≤ high<br>
+&emsp;mid = (low + high)/2<br>
+&emsp;IF arr[mid] = target THEN RETURN mid<br>
+&emsp;ELSE IF target < arr[mid] THEN high = mid - 1<br>
+&emsp;ELSE low = mid + 1<br>
+END WHILE
+        </div>
+    </div>
+</div>
+
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">3. Bubble Sort</div>
+    <div class="content">
+        <p><b>Explanation:</b> Repeatedly swaps adjacent items to sort a list.</p>
+        <div class="example-box">
+[4,3,1] → [3,1,4] → [1,3,4]
+        </div>
+    </div>
+</div>
+
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">4. Selection Sort</div>
+    <div class="content">
+        <p><b>Explanation:</b> Finds the smallest value and moves it to the front repeatedly.</p>
+        <div class="example-box">
+[5,2,8] → [2,5,8]
+        </div>
+    </div>
+</div>
+
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">5. Insertion Sort</div>
+    <div class="content">
+        <p><b>Explanation:</b> Builds the sorted list one item at a time.</p>
+        <div class="example-box">
+[4,2,3] → [2,3,4]
+        </div>
+    </div>
+</div>
+
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">6. Merge Sort</div>
+    <div class="content">
+        <p><b>Explanation:</b> Divides the list into halves, sorts them, and merges.</p>
+        <div class="example-box">
+[6,3,8] → split → merge → [3,6,8]
+        </div>
+    </div>
+</div>
+
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">7. Quick Sort</div>
+    <div class="content">
+        <p><b>Explanation:</b> Picks a pivot and partitions list into smaller and larger parts.</p>
+        <div class="example-box">
+pivot=5 → arrange → sort
+        </div>
+    </div>
+</div>
+
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">8. Fibonacci Algorithm</div>
+    <div class="content">
+        <p><b>Explanation:</b> Each number is the sum of the two previous numbers.</p>
+        <div class="example-box">
+0,1,1,2,3,5,8...
+        </div>
+    </div>
+</div>
+
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">9. Factorial Algorithm</div>
+    <div class="content">
+        <p><b>Explanation:</b> Multiplies a number by every positive integer below it.</p>
+        <div class="example-box">
+5! = 5×4×3×2×1 = 120
+        </div>
+    </div>
+</div>
+
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">10. Palindrome Check</div>
+    <div class="content">
+        <p><b>Explanation:</b> Checks if a string reads the same forwards and backwards.</p>
+        <div class="example-box">
+"level" → palindrome
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

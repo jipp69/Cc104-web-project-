@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python Examples</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">CC104</div>
+    <ul>
+        <li><a href="index.html">Members</a></li>
+        <li><a href="algorithms.html">Algorithms</a></li>
+        <li><a href="pseudocode.html">Pseudocode</a></li>
+        <li><a href="cpp.html">C++</a></li>
+        <li><a href="python.html">Python</a></li>
+    </ul>
+</nav>
+
+<h1 class="page-title">Python Examples</h1>
+
+<!-- Array -->
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">Array</div>
+    <div class="content">
+        <div class="code-box">
+<b>Explanation:</b> Shows how to use Python lists and nested lists (matrix).<br><br>
+arr = [1,2,3,4,5]<br>
+for x in arr: print(x)<br><br>
+matrix = [[1,2],[3,4]]<br>
+for row in matrix:<br>
+&emsp;for val in row: print(val)
+        </div>
+    </div>
+</div>
+
+<!-- Stack -->
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">Stack</div>
+    <div class="content">
+        <div class="code-box">
+<b>Explanation:</b> Demonstrates stacks for Infix, Prefix, and Postfix expression evaluation.<br><br>
+# Infix Evaluation<br>
+stack = []<br>
+stack.append(5)<br>
+stack.pop()<br>
+print(stack[-1])<br><br>
+# Prefix Evaluation<br>
+# Process from right to left, pop two operands, push result<br><br>
+# Postfix Evaluation<br>
+# Process from left to right, pop two operands, push result
+        </div>
+    </div>
+</div>
+
+<!-- Queue -->
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">Queue</div>
+    <div class="content">
+        <div class="code-box">
+<b>Explanation:</b> Shows a queue using deque and basic operations including circular queue logic.<br><br>
+from collections import deque<br>
+q = deque()<br>
+q.append(1)<br>
+q.append(2)<br>
+print(q.popleft())<br><br>
+# Circular Queue<br>
+# REAR = (REAR + 1) % SIZE, FRONT = (FRONT + 1) % SIZE
+        </div>
+    </div>
+</div>
+
+<!-- Tree -->
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">Tree</div>
+    <div class="content">
+        <div class="code-box">
+<b>Explanation:</b> Demonstrates Inorder, Preorder, and Postorder traversal of a binary tree.<br><br>
+# Inorder Traversal
+def inorder(node):
+    if node:
+        inorder(node.left)
+        print(node.data)
+        inorder(node.right)<br><br>
+# Preorder Traversal
+def preorder(node):
+    if node:
+        print(node.data)
+        preorder(node.left)
+        preorder(node.right)<br><br>
+# Postorder Traversal
+def postorder(node):
+    if node:
+        postorder(node.left)
+        postorder(node.right)
+        print(node.data)
+        </div>
+    </div>
+</div>
+
+<script>
+function toggleContent(card) {
+    let content = card.querySelector(".content");
+    content.style.display = content.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>

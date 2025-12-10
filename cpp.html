@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C++ Examples</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">CC104</div>
+    <ul>
+        <li><a href="index.html">Members</a></li>
+        <li><a href="algorithms.html">Algorithms</a></li>
+        <li><a href="pseudocode.html">Pseudocode</a></li>
+        <li><a href="cpp.html">C++</a></li>
+        <li><a href="python.html">Python</a></li>
+    </ul>
+</nav>
+
+<h1 class="page-title">C++ Examples</h1>
+
+<!-- Array -->
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">Array</div>
+    <div class="content">
+        <div class="code-box">
+<b>Explanation:</b> Demonstrates simple array usage and printing elements.<br><br>
+int arr[5] = {1,2,3,4,5};<br>
+for(int i=0;i<5;i++) cout &lt;&lt; arr[i];<br><br>
+int matrix[2][2]={{1,2},{3,4}};<br>
+for(int i=0;i&lt;2;i++)<br>
+&emsp;for(int j=0;j&lt;2;j++) cout &lt;&lt; matrix[i][j];
+        </div>
+    </div>
+</div>
+
+<!-- Stack -->
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">Stack</div>
+    <div class="content">
+        <div class="code-box">
+<b>Explanation:</b> Shows how to use stacks for Infix, Prefix, and Postfix expressions.<br><br>
+// Infix Evaluation<br>
+stack&lt;int&gt; s;<br>
+s.push(5); s.pop(); cout &lt;&lt; s.top();<br><br>
+// Prefix Evaluation<br>
+// Process from right to left, pop two operands, push result<br><br>
+// Postfix Evaluation<br>
+// Process from left to right, pop two operands, push result
+        </div>
+    </div>
+</div>
+
+<!-- Queue -->
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">Queue</div>
+    <div class="content">
+        <div class="code-box">
+<b>Explanation:</b> Shows a simple queue and basic operations including a circular queue.<br><br>
+queue&lt;int&gt; q;<br>
+q.push(1); q.push(2);<br>
+cout &lt;&lt; q.front(); q.pop();<br><br>
+// Circular Queue<br>
+// REAR = (REAR+1)%SIZE; FRONT = (FRONT+1)%SIZE;
+        </div>
+    </div>
+</div>
+
+<!-- Tree -->
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">Tree</div>
+    <div class="content">
+        <div class="code-box">
+<b>Explanation:</b> Demonstrates Inorder, Preorder, and Postorder tree traversals.<br><br>
+// Inorder Traversal
+void inorder(Node* root){
+    if(!root) return;
+    inorder(root-&gt;left);
+    cout &lt;&lt; root-&gt;data;
+    inorder(root-&gt;right);
+}<br><br>
+// Preorder Traversal
+void preorder(Node* root){
+    if(!root) return;
+    cout &lt;&lt; root-&gt;data;
+    preorder(root-&gt;left);
+    preorder(root-&gt;right);
+}<br><br>
+// Postorder Traversal
+void postorder(Node* root){
+    if(!root) return;
+    postorder(root-&gt;left);
+    postorder(root-&gt;right);
+    cout &lt;&lt; root-&gt;data;
+}
+        </div>
+    </div>
+</div>
+
+<script>
+function toggleContent(card) {
+    let content = card.querySelector(".content");
+    content.style.display = content.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pseudocode Examples</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">CC104</div>
+    <ul>
+        <li><a href="index.html">Members</a></li>
+        <li><a href="algorithms.html">Algorithms</a></li>
+        <li><a href="pseudocode.html">Pseudocode</a></li>
+        <li><a href="cpp.html">C++</a></li>
+        <li><a href="python.html">Python</a></li>
+    </ul>
+</nav>
+
+<h1 class="page-title">10 Pseudocode Examples</h1>
+
+<!-- 1. Simple Addition -->
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">1. Simple Addition</div>
+    <div class="content">
+        <div class="example-box">
+<b>Explanation:</b> Adds two numbers input by the user and outputs the sum.<br><br>
+INPUT num1, num2<br>
+SET sum = num1 + num2<br>
+OUTPUT sum
+        </div>
+    </div>
+</div>
+
+<!-- 2. Largest of Three Numbers -->
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">2. Finding the Largest of Three Numbers</div>
+    <div class="content">
+        <div class="example-box">
+<b>Explanation:</b> Compares three numbers and prints the largest one.<br><br>
+INPUT a, b, c<br>
+IF a > b AND a > c THEN<br>
+&emsp;OUTPUT a<br>
+ELSE IF b > c THEN<br>
+&emsp;OUTPUT b<br>
+ELSE<br>
+&emsp;OUTPUT c<br>
+END IF
+        </div>
+    </div>
+</div>
+
+<!-- 3. Calculating Average -->
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">3. Calculating Average (Fixed Count)</div>
+    <div class="content">
+        <div class="example-box">
+<b>Explanation:</b> Takes 5 numbers, sums them, and calculates the average.<br><br>
+SET total = 0<br>
+SET count = 0<br>
+FOR i FROM 1 TO 5 DO<br>
+&emsp;INPUT number<br>
+&emsp;SET total = total + number<br>
+&emsp;SET count = count + 1<br>
+END FOR<br>
+SET average = total / count<br>
+OUTPUT average
+        </div>
+    </div>
+</div>
+
+<!-- 4. Check Positive/Negative/Zero -->
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">4. Check if Number is Positive/Negative/Zero</div>
+    <div class="content">
+        <div class="example-box">
+<b>Explanation:</b> Determines if a number is positive, negative, or zero.<br><br>
+INPUT num<br>
+IF num > 0 THEN<br>
+&emsp;OUTPUT "Positive"<br>
+ELSE IF num < 0 THEN<br>
+&emsp;OUTPUT "Negative"<br>
+ELSE<br>
+&emsp;OUTPUT "Zero"<br>
+END IF
+        </div>
+    </div>
+</div>
+
+<!-- 5. Countdown Loop (DO-WHILE) -->
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">5. Countdown Loop (DO-WHILE)</div>
+    <div class="content">
+        <div class="example-box">
+<b>Explanation:</b> Counts down from 10 to 1 using a loop that executes at least once.<br><br>
+SET counter = 10<br>
+DO<br>
+&emsp;OUTPUT counter<br>
+&emsp;SET counter = counter - 1<br>
+WHILE counter > 0
+        </div>
+    </div>
+</div>
+
+<!-- 6. Sum of Numbers 1 to N (WHILE Loop) -->
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">6. Sum of Numbers 1 to N (WHILE Loop)</div>
+    <div class="content">
+        <div class="example-box">
+<b>Explanation:</b> Computes the sum of numbers from 1 to N using a WHILE loop.<br><br>
+INPUT N<br>
+SET total = 0<br>
+SET i = 1<br>
+WHILE i <= N DO<br>
+&emsp;SET total = total + i<br>
+&emsp;SET i = i + 1<br>
+END WHILE<br>
+OUTPUT total
+        </div>
+    </div>
+</div>
+
+<!-- 7. Greeting Multiple Times (FOR Loop) -->
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">7. Greeting Multiple Times (FOR Loop)</div>
+    <div class="content">
+        <div class="example-box">
+<b>Explanation:</b> Prints "Hello!" three times using a FOR loop.<br><br>
+FOR count FROM 1 TO 3 DO<br>
+&emsp;OUTPUT "Hello!"<br>
+END FOR
+        </div>
+    </div>
+</div>
+
+<!-- 8. User Input Validation -->
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">8. User Input Validation (Loop until valid)</div>
+    <div class="content">
+        <div class="example-box">
+<b>Explanation:</b> Ensures the user enters a number between 0 and 100.<br><br>
+GET input_value<br>
+WHILE input_value < 0 OR input_value > 100 DO<br>
+&emsp;OUTPUT "Invalid input. Enter a number between 0 and 100."<br>
+&emsp;GET input_value<br>
+END WHILE<br>
+OUTPUT "Valid input received: " + input_value
+        </div>
+    </div>
+</div>
+
+<!-- 9. Treasure Hunt Hint Logic -->
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">9. Treasure Hunt Hint Logic</div>
+    <div class="content">
+        <div class="example-box">
+<b>Explanation:</b> Provides directions based on player and treasure positions.<br><br>
+// Assume treasure_row, treasure_col are set<br>
+// Assume player_row, player_col are inputs<br>
+IF player_row < treasure_row THEN<br>
+&emsp;OUTPUT "Go South"<br>
+ELSE IF player_row > treasure_row THEN<br>
+&emsp;OUTPUT "Go North"<br>
+ELSE<br>
+&emsp;IF player_col < treasure_col THEN<br>
+&emsp;&emsp;OUTPUT "Go East"<br>
+&emsp;ELSE IF player_col > treasure_col THEN<br>
+&emsp;&emsp;OUTPUT "Go West"<br>
+&emsp;ELSE<br>
+&emsp;&emsp;OUTPUT "Found it!"<br>
+&emsp;END IF<br>
+END IF
+        </div>
+    </div>
+</div>
+
+<!-- 10. Simple Fibonacci Sequence -->
+<div class="algo-card" onclick="toggleContent(this)">
+    <div class="algo-title">10. Simple Fibonacci Sequence</div>
+    <div class="content">
+        <div class="example-box">
+<b>Explanation:</b> Generates the first few terms of the Fibonacci sequence.<br><br>
+SET a = 0<br>
+SET b = 1<br>
+OUTPUT a<br>
+OUTPUT b<br>
+SET next_term = a + b<br>
+OUTPUT next_term<br>
+SET a = b<br>
+SET b = next_term<br>
+// Repeat steps 3-6 for more terms
+        </div>
+    </div>
+</div>
+
+<script>
+function toggleContent(card) {
+    let content = card.querySelector(".content");
+    content.style.display = content.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
